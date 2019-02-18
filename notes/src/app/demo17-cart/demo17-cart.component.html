@@ -1,0 +1,12 @@
+<p>
+  demo17-cart works!
+</p>
+
+<button (click)="jump()">去结算</button>
+
+<h1 routerLink="/orderConfirm">结算</h1>
+
+<button (click)="submitOrder()">提交订单</button>
+
+<h2 routerLink="/submit/{{myPrice}}">test</h2>
+<h2 [routerLink]="'/submit/'+myPrice">test2</h2>

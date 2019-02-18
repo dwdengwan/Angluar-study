@@ -1,0 +1,12 @@
+<p>
+  demo04-lianxi works!
+</p>
+
+<ul >
+  <ng-container *ngFor="let tmp of stuList">
+    <li *ngIf="tmp.score > 60" >
+    {{tmp.name}}
+    </li>
+  </ng-container>
+</ul>
+

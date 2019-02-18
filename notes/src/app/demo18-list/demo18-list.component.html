@@ -1,0 +1,7 @@
+<ul>
+  <!-- 方式1：以routerLink的方式 routerLink="/demo18Detail/{{tmp.lid}}"-->
+  <!-- 方式2: 以js的方式导航：Router -->
+  <li (click)="jump(tmp.lid)" *ngFor="let tmp of myList">
+    {{tmp.title}}
+  </li>
+</ul>

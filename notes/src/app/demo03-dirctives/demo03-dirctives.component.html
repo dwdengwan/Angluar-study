@@ -1,0 +1,53 @@
+<p>
+  demo03-dirctives works!
+</p>
+<!--
+ 循环的指令:
+  *ngFor="let tmp of list"
+-->
+<ul>
+  <li *ngFor="let tmp of list;let  myIndex=index">
+    {{tmp+" 下标是"+myIndex}}
+  </li>
+</ul>
+
+<div *ngIf="isMember">
+  <h2>欢迎会员</h2>
+</div>
+
+
+<!-- 
+  switch(n)
+ {
+  case 1:
+    执行代码块 1
+    break;
+  case 2:
+    执行代码块 2
+    break;
+  default:
+    n 与 case 1 和 case 2 不同时执行的代码
+  }
+  --->
+
+<!-- 套路1 
+ [ngSwitch]="myScore"
+ *ngSwitchCase="条件a"
+ *ngSwitchCase="条件b"
+-->
+
+<div [ngSwitch]="true">
+  <p *ngSwitchCase="myScore>80">优秀</p>
+  <p *ngSwitchCase="myScore>60&&myScore<=80">
+    中等
+  </p>
+  <p *ngSwitchDefault>不及格</p>
+</div>
+
+<div [ngSwitch]="myAnswer">
+  <p *ngSwitchCase="'a'">你的选项是a</p>
+  <p *ngSwitchCase="'b'">你的选项是b</p>
+  <p *ngSwitchCase="'c'">你的选项是c</p>
+  <p *ngSwitchCase="'d'">你的选项是d</p>
+  <p *ngSwitchDefault>请输入正确答案</p>
+</div>

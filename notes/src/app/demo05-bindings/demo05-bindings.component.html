@@ -1,0 +1,28 @@
+<p>
+  demo05-bindings works!
+</p>
+<!-- 事件绑定 ()--->
+<button (click)="handleClick()">
+  clickMe
+</button>
+
+<!-- 属性绑定 []--->
+<a [href]="myUrl">test</a>
+
+<!-- 双向数据绑定：方向1:从数据到视图；方向2：表单视图中用户操作的结果 绑定到数据 --->
+<input type="text" 
+[(ngModel)]="uName"
+(ngModelChange)="handleModelChange()"
+/>
+<p>{{uName}}</p>
+
+<!-- 动态样式绑定 --->
+<p [ngStyle]="{color:myColor}">
+  这是一个动态样式绑定的例子
+</p>
+
+<!-- 动态样式类绑定 --->
+<h2 [ngClass]="{myRed:false}">
+  动态样式类绑定的案例
+</h2>
+
